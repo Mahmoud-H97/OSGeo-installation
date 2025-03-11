@@ -1,7 +1,7 @@
  OSGeo-installation
 ********************
 
-:red:`Installation in Windows`
+Installation in Windows
 ==============================
 
 Installing dependencies
@@ -118,7 +118,7 @@ Setting environment variables
    python -m pip3 install openpyxl joblib
    python -m pip3 install grass_session
 
-:red:`Installation in Linux`
+Installation in Linux
 ============================
 
 The below steps are tested in Ubuntu 18.04 LTS, it should also work in other Linux distibutions, you may have to adapt some of the installation steps accordingly. This is also valid for installation in **Bash for Windows** app with Ubuntu inside windows 10.
