@@ -1,44 +1,8 @@
-# OSGeo-installation
-PySEBAL Installation
+ OSGeo-installation
 ********************
-
-PySEBAL is a python library to compute Actual EvapoTranspiration (ETa) and other related variables using SEBAL model. Following specifications are recommended to run PySEBAL.
-
-Computing requirements
-======================
-
-Hardware
-++++++++
-* CPU with 2 cores and > 2GHz processor
-* Minimum of 8 GB RAM
-* Storage space of 10 - 20 GB if processing multiple landsat tiles
-
-Operating systems
-+++++++++++++++++
-* Windows 7/10 (Windows 8, 8.1 should also work, provided dependencies are met)
-* Linux (Tested in Ubuntu 18.04 LTS, other Linux OS should also work)
-
-PySEBAL requires Python 3, (tested in python > 3.6).
-
-Source code
-===========
-The PySEBAL library is hosted in a publicly available github repository. The library can be downloaded from `here <https://github.com/spareeth/PySEBAL_dev>`_. In the link select the latest ``version3.7.3`` and **Download ZIP**.
-
-.. figure:: img/git3.png
-   :align: center
-   :width: 400
-
-Once it is downloaded, unzip it (use *extract here*) into your ``D:\`` drive or any drive other than ``C:\`` drive. Rename the folder ``PySEBAL_dev-version3.7.3`` to ``PySEBAL_dev``.
-
-The directory structure after download and unzip should like like below.
-
-.. figure:: img/git2.png
-   :align: center
-   :width: 400
 
 :red:`Installation in Windows`
 ==============================
-The PySEBAL library has multiple dependencies to support spatial data processing and computing. All the required libraries are open source. We reccomend using the OSGeo4W installer and environment to install all the dependencies and to run PySEBAL library in command line. 
 
 Installing dependencies
 +++++++++++++++++++++++
@@ -154,30 +118,6 @@ Setting environment variables
    python -m pip3 install openpyxl joblib
    python -m pip3 install grass_session
 
-Test installation
-+++++++++++++++++
-
-To test whether the PySEBAL will run, open OSGeo4W Shell, and type following commands.
-
-.. code-block:: python
-   :linenos:
-
-   # After each command click enter
-   # Any line starting with '#' is comment line
-   # First enable python 3 by typing the following command and 'enter'
-   py3_env
-   # Change drive
-   D:
-   # Change to the directory with SEBAL code
-   cd PySEBAL_dev\SEBAL
-   # open python
-   python
-   # import one of the PySEBAL Script
-   import pysebal_py3
-   # If there are no errors, the installation is successful
-   # To exit from python
-   exit()
-
 :red:`Installation in Linux`
 ============================
 
@@ -220,85 +160,7 @@ Open a Terminal and type in following commands to install required packages. You
 
 For other Linux distributions there is detailed instruction to install qgis `here <https://qgis.org/en/site/forusers/alldownloads.html>`_ and grass gis `here <https://grass.osgeo.org/download/software/linux/>`_.
 
-Download source code
-++++++++++++++++++++
-Open a terminal and type in following git command to download the PySEBAL_dev repository.
 
-.. code-block:: Shell
-   :linenos:
-
-   # After each command click enter
-   # Any line starting with '#' is comment line
-   # change to working directory, 
-   # /mnt/d if you are accessing windows D: drive from linux. For example "bash for windows" in windows 10
-   cd /mnt/d
-   # Clone the PySEBAL_dev repository
-   git clone https://github.com/spareeth/PySEBAL_dev.git
-
-Testing installation
-++++++++++++++++++++
-Open a terminal and type in following codes to test if the installation is successful.
-
-.. code-block:: Shell
-   :linenos:
-
-   # After each command click enter
-   # Any line starting with '#' is comment line
-   # change to the PySEBAL_dev directory, assuming that the repository is cloned in /mnt/d
-   cd /mnt/d/PySEBAL_dev/SEBAL
-   # List the files inside this folder
-   ls
-   # Open Python
-   python
-   import pysebal_py3
-   # If there are no errors, the installation is successful
-   # To exit from python (ctrl-d)
-   exit()
-
-:red:`Test run PySEBAL`
-=======================
-
-Once PySEBAL is installed, we can run the PySEBAL code using the test data provided with the PySEBAL_dev library. The test data is located in the folder ``PySEBAL_dev\test_data``. If you have installed PySEBAL in ``D:`` drive then it should be ``D:\PySEBAL_dev\test_data``.
-
-Assuming that PySEBAL_dev is in ``D:`` drive, Let us run the library with test data.
-
-Open a OSGeo4W Shell and change the directory to ``D:\PySEBAL_dev\SEBAL`` and follow the commands given below.
-
-**In Windows**
-
-.. code-block:: Shell
-   :linenos:
-
-   # After each command click enter
-   # Any line starting with '#' is comment line
-   # First enable python 3 by typing the following command and 'enter'
-   py3_env   
-   # change to the PySEBAL_dev\SEBAL directory
-   cd D:\PySEBAL_dev\SEBAL
-   # Run the PySEBAL script
-   python Run_py3.py
-
-**In Linux**
-
-.. code-block:: Shell
-   :linenos:
-
-   # After each command click enter
-   # Any line starting with '#' is comment line
-   # change to the PySEBAL_dev\SEBAL directory
-   cd \mnt\d\PySEBAL_dev\SEBAL
-   # Run the PySEBAL script
-   python Run_py3.py
-
-After the above commands, there will be a ``output`` folder inside ``D:\PySEBAL\test_data`` with the following structure. 
-
-.. figure:: img/pysebal_folderstr1.png
-   :align: center
-   :width: 200
-
-.. warning::
-
-   If PySEBAL_dev is not in ``D:`` drive, adapt changes to the path in above commands accordingly. To change the path open the excel sheet ``D:\PySEBAL_dev\docs\InputEXCEL_v3_3_7_WIN.xlsx`` in case of Windows OR open ``D:\PySEBAL_dev\docs\InputEXCEL_v3_3_7_LIN.xlsx`` in case of Linux. You need to change the path in columns B, C & E in the sheet 1.
 
 .. note::
 
