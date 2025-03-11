@@ -1,1 +1,0 @@
-# OSGeo-installation
